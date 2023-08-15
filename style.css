@@ -1,0 +1,719 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* header starting */
+header {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('./assests/images/cse1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+}
+
+@media (max-width: 1000px) {
+  header {
+    height: 50vh;
+    background-position: center;
+  }
+}
+
+/* header ending */
+
+/* nav-bar starting  */
+
+.srkrlogo {
+  height: 60px;
+  max-height: 100%;
+  width: auto;
+}
+
+@media (max-width: 500px) {
+  .srkrlogo {
+    height: 30px;
+    width: min-content;
+  }
+}
+
+@media (max-width: 225px) {
+  .srkrlogo {
+    height: 10px;
+    width: min-content;
+  }
+}
+
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.navbar {
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
+  font-size: larger;
+}
+
+.navbar.scrolled {
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+.navbar .nav-link {
+  color: white;
+}
+
+.navbar .nav-link:hover {
+  color: white;
+}
+
+.navbar.scrolled .nav-link:hover {
+  color: rgb(77, 77, 77);
+}
+
+.navbar .nav-link:focus,
+.navbar .dropdown-item:focus,
+.navbar .nav-link:active,
+.navbar .dropdown-item:active {
+  color: white;
+  outline: none;
+}
+
+.navbar.scrolled .nav-link,
+.navbar.scrolled .dropdown-item {
+  color: black;
+  transition: 0.3s ease both;
+}
+
+.dropdown-menu {
+  background-color: white;
+  color: black;
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    background-color: #fff !important;
+    width: 100vw;
+    overflow-x: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+  }
+
+  .navbar .nav-link,
+  .navbar .dropdown-item {
+    color: black;
+    transition: 0.3s ease both;
+  }
+
+  .navbar .nav-link:focus,
+  .navbar .dropdown-item:focus,
+  .navbar .nav-link:active,
+  .navbar .dropdown-item:active {
+    color: black;
+    outline: none;
+  }
+}
+
+/*Nav-bar End*/
+
+/* Typing */
+.typing-container {
+  width: 50%;
+  position: absolute;
+  bottom: 10px;
+  left: 2px;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.minitext {
+  font-size: large;
+  font-weight: 500;
+  text-shadow: 3px 3px 2px rgba(0, 0, 0, 1);
+}
+
+@media (max-width: 1000px) {
+  .typing-container {
+    width: 100%;
+    font-size: 18px;
+    position: absolute;
+    bottom: 1px;
+    left: 1px;
+  }
+
+  .minitext {
+    font-size: medium;
+  }
+}
+
+@media (max-width: 500px) {
+  .typing-container {
+    width: 100%;
+    position: absolute;
+    bottom: 1px;
+    left: 1px;
+  }
+
+  .typing-container h1 {
+    font-size: 22px;
+  }
+
+  .typing-container .head {
+    margin-top: 15px !important;
+    font-size: 18px !important;
+    padding: 2px 5px !important;
+    margin: auto;
+  }
+
+  .typing-container .minitext {
+    display: none;
+  }
+
+}
+
+.typed-cursor {
+  opacity: 0;
+}
+
+.one {
+  color: rgb(255, 250, 117);
+  text-shadow: 1px 1px 2px #88211a, 0 0 2em #076593, 0 0 0.2em #076593;
+}
+
+.two {
+  color: rgb(163, 255, 255);
+}
+
+/* Buttons */
+.button-66 {
+  background-color: #0a6bff !important;
+  border-radius: 4px;
+  border: 0;
+  box-shadow: rgba(1, 60, 136, .5) 0 -1px 3px 0 inset, rgba(0, 44, 97, .1) 0 3px 6px 0;
+  box-sizing: border-box;
+  color: #fff !important;
+  cursor: pointer;
+  display: inherit;
+  font-family: "Space Grotesk", -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  line-height: 24px;
+  margin: 0;
+  min-height: 56px;
+  min-width: 120px;
+  padding: 16px 20px !important;
+  position: relative;
+  text-align: center;
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  transition: all .2s cubic-bezier(.22, .61, .36, 1);
+}
+
+.button-66:hover {
+  background-color: #065dd8;
+  transform: translateY(-2px);
+}
+
+@media (min-width: 1000px) {
+  .button-66 {
+    padding: 16px 44px;
+    min-width: 150px;
+  }
+}
+
+/* buttons end */
+
+/* news-banner */
+
+@keyframes ticker {
+  0% {
+    top: 0;
+  }
+
+  100% {
+    top: -100%;
+  }
+}
+
+.news-ticker {
+  display: flex;
+  gap: 1rem;
+  height: 40px;
+  background: white;
+  max-width: 70%;
+  margin: 3rem auto;
+  margin-left: 30%;
+}
+
+.label {
+  white-space: nowrap;
+  background: maroon;
+  color: white;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  position: relative;
+}
+
+
+.label::after {
+  content: "";
+  position: absolute;
+  right: -20px;
+  border: 10px solid transparent;
+  border-left-color: maroon;
+}
+
+.headlines {
+  list-style: none;
+  padding-right: 10px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.headlines li {
+  color: #000;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  line-height: 40px;
+  clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  transition: all 1s ease-in-out;
+}
+
+.headlines li.active {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+
+
+@media (max-width: 500px) {
+  .news-ticker {
+    max-width: 100%;
+    margin-left: 0%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin: 2rem auto;
+  }
+
+  .label::after {
+    display: none;
+  }
+
+  .headlines {
+    padding-right: 0;
+    height: 80px !important;
+  }
+
+  @keyframes ticker {
+    0% {
+      top: 0;
+    }
+
+    100% {
+      top: -100%;
+    }
+  }
+
+  .headlines li {
+    line-height: 1.2;
+  }
+
+}
+
+/* news banner end */
+
+/* college discription */
+.matter {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 4%;
+}
+
+.matter i {
+  font-size: 40px;
+  padding: 5px;
+  color: maroon;
+}
+
+.user,
+.system,
+.book {
+  flex: 1 0 100%;
+  max-width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+
+  .user,
+  .system {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 900px) {
+
+  .user,
+  .system,
+  .book {
+    flex-basis: 33.33%;
+    max-width: 33.33%;
+  }
+}
+
+/* college description ends*/
+
+
+/* Hod sir container */
+.imgcontainer {
+  display: flex;
+  border-radius: 1em;
+  background-color: white;
+  max-width: 80%;
+  margin: 10% auto;
+  box-shadow: 0 0 20px -2px;
+}
+
+.imgcontainer__half-image {
+  flex: 1;
+  background-image: url("./assests/images/hod.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 5em;
+  border-top-left-radius: 1em;
+  border-bottom-left-radius: 1em;
+}
+
+.imgcontainer__half-content {
+  padding: 5em;
+  flex: 1;
+}
+
+.item-type {
+  color: #767676;
+  text-transform: uppercase;
+  font: 1rem serif;
+  margin-top: 0;
+}
+
+.item-title {
+  color: #13294b;
+  font: bold 1.75rem/1.1 serif;
+  margin: 0.625em 0;
+}
+
+.item-description {
+  font: 1rem/1.4 serif;
+}
+
+.detail {
+  font-size: 1rem !important;
+  color: #b61500 !important;
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    margin: 2em;
+  }
+
+  .imgcontainer {
+    flex-flow: column nowrap;
+  }
+
+  .imgcontainer__half-image {
+    border-top-right-radius: 1em;
+    border-bottom-left-radius: 0;
+    min-height: 300px;
+  }
+
+  .imgcontainer__half-content {
+    padding: 1em;
+  }
+}
+
+/* Hod sir container end */
+
+/* course section */
+.container {
+  display: flex;
+  margin: 10%;
+  gap: 100px;
+}
+
+.container h3 {
+  font-size: 20px;
+}
+
+
+/* Adjustments for responsiveness */
+
+@media (max-width: 767px) {
+  .title-w3l {
+    font-size: 24px;
+  }
+
+  .column.col-sm-6 {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .title-w3l {
+    font-size: 30px;
+  }
+}
+
+/* Additional styling */
+
+.midd-w3 {
+  background-color: #f5f5f5;
+}
+
+.title-subw3hny {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+.title-w3l {
+  font-size: 36px;
+  font-weight: 600;
+  color: #333;
+  margin-top: 20px;
+}
+
+.inn-text {
+  color: #007bff;
+}
+
+.btn-style {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.radius-image {
+  border-radius: 6px;
+}
+
+.edu-heading-title a {
+  color: #333;
+  text-decoration: none;
+}
+
+.edu-heading-title a:hover {
+  color: #007bff;
+}
+
+.column-w3-img {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mt-md-4 {
+  margin-bottom: 2rem !important;
+}
+
+.edu-info {
+  position: absolute;
+  bottom: 5%;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  background-color: white;
+  color: #fff;
+}
+
+.title-subw3hny {
+  font-size: 36px;
+}
+
+/* Adjustments for responsiveness */
+
+@media (max-width: 767px) {
+  .sub-columns {
+    flex-wrap: wrap;
+  }
+
+  .sub-columns .col-md-6,
+  .sub-columns .col-lg-3 {
+    margin-bottom: 30px;
+  }
+}
+
+
+/* course section ends */
+
+/* counting numbers*/
+.counter-numbers {
+  font-size: 32px;
+  color: maroon;
+
+}
+
+/* counting numbers end*/
+
+/* footer */
+
+.footer-sub {
+  background-color: #f5f5f5;
+  position: relative;
+}
+
+.footer-sub h6 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.footer-sub p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #777;
+}
+
+.social li {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.social li:last-child {
+  margin-right: 0;
+}
+
+.social a {
+  display: block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.social a {
+  color: #000;
+  background-color: #fff;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.social li a[href="#facebook"]:hover {
+  background: #3B5998;
+  color: white;
+}
+
+.social li a[href="#linkedin"]:hover {
+  color: #fff;
+  background-color: #007bb6
+}
+
+.social li a[href="#twitter"]:hover {
+  background: #55ACEE;
+  color: white;
+}
+
+.social li a[href="#google"]:hover {
+  color: #fff;
+  background-color: #dd4b39;
+}
+
+.social li a[href="#pinterest"]:hover {
+  color: #fff;
+  background-color: #cb2027;
+}
+
+.sub-two-right ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.sub-two-right ul li {
+  margin-bottom: 10px;
+}
+
+.sub-two-right ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.sub-two-right ul li a:hover {
+  text-decoration: underline;
+}
+
+
+.columns {
+  font-size: 14px;
+  color: #777;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 2px;
+}
+
+
+.columns a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.columns a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+  .social li a[href="#facebook"] {
+    background: #3B5998;
+    color: white;
+  }
+
+  .social li a[href="#linkedin"] {
+    color: #fff;
+    background-color: #007bb6;
+  }
+
+  .social li a[href="#twitter"] {
+    background: #55ACEE;
+    color: white;
+  }
+
+  .social li a[href="#google"] {
+    color: #fff;
+    background-color: #dd4b39;
+  }
+
+  .social li a[href="#pinterest"] {
+    color: #fff;
+    background-color: #cb2027;
+  }
+}
+
+/* footer ends */
