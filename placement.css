@@ -1,0 +1,225 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0
+}
+
+.mySlides {
+    display: none;
+}
+
+.headline {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    width: 60%;
+    position: relative;
+    margin: auto;
+    padding: 10px;
+    height: 70vh;
+    box-shadow: 3px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: rgb(72, 72, 72);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #f2f2f2;
+}
+
+
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 4.5s;
+    animation-name: fade;
+    animation-duration: 4.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .7
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .7
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+
+    .prev,
+    .next,
+    .text {
+        font-size: 11px
+    }
+
+    .dot {
+        height: 10px;
+        width: 10px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    .prev,
+    .next,
+    .text {
+        font-size: 14px
+    }
+
+}
+
+.collapsed {
+    cursor: pointer;
+}
+
+.placements {
+    margin: 10px auto;
+    padding: 10px;
+    width: 70%;
+    box-shadow: 0 0 10px -2px;
+}
+
+.table-container {
+    display: none;
+}
+
+.table-container.actived {
+    display: block;
+}
+
+.tables {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse !important;
+    width: 100%;
+}
+
+.intable td,
+.intable th {
+    border: 1px solid #ddd !important;
+    padding: 8px !important;
+}
+
+.intable tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.intable tr:hover {
+    background-color: #ddd;
+}
+
+.intable tr a {
+    color: #007697;
+    text-decoration: none;
+}
+
+.head {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    border-bottom: 2px solid maroon;
+    color: rgb(0, 0, 0);
+    font-weight: normal;
+}
+
+.head tr th {
+    font-weight: normal;
+    font-size: 14px;
+}
+
+
+@media only screen and (max-width: 500px) {
+    .placements {
+        width: 100%;
+    }
+}
+
+.table-responsive {
+    margin: 10px auto;
+    padding: 10px;
+    width: 70%;
+}
+
+.table-container {
+    width: 100%;
+}
+
+.course-list-table thead tr th {
+    border-color: #ea6645;
+    color: #252525;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.course-list-table tbody tr th {
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    color: #767676;
+    font-weight: normal;
+    padding: 15px 10px;
+}

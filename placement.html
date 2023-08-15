@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assests/images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="placement.css">
+    <title>SRKR CSE</title>  
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            user-select: none;
+            
+          }
+          
+          body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+          }
+          
+          body::-webkit-scrollbar {
+            display: none;
+          }
+          
+          .srkrlogo {
+            height: 60px;
+            max-height: 100%;
+            width: auto;
+          }
+          
+          @media (max-width: 500px) {
+            .srkrlogo {
+              height: 30px;
+              width: min-content;
+            }
+          }
+          
+          @media (max-width: 225px) {
+            .srkrlogo {
+              height: 10px;
+              width: min-content;
+            }
+          }
+          
+          
+           .dropdown:hover .dropdown-menu {
+            display: block;
+          }
+          
+          /* .navbar {
+            background-color: transparent;
+            transition: background-color 0.3s ease-in-out;
+            font-size: larger;
+
+          }
+          
+          .navbar.scrolled {
+            background-color: white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+          }
+          
+          .navbar .nav-link {
+            color: white;
+          }
+          
+          .navbar .nav-link:hover {
+            color: white;
+          }
+          
+          .navbar.scrolled .nav-link:hover {
+            color: rgb(77, 77, 77);
+          }
+          
+          .navbar .nav-link:focus,
+          .navbar .dropdown-item:focus,
+          .navbar .nav-link:active,
+          .navbar .dropdown-item:active {
+            color: white;
+            outline: none;
+          }
+          
+          .navbar.scrolled .nav-link,
+          .navbar.scrolled .dropdown-item {
+            color: black;
+            transition: 0.3s ease both;
+          }
+          
+          .dropdown-menu {
+            background-color: white;
+            color: black;
+          }
+          
+          @media (max-width: 500px) {
+            .navbar {
+              background-color: #fff !important;
+              width: 100vw;
+              overflow-x: hidden;
+              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+            }
+           
+            .navbar .nav-link,
+            .navbar .dropdown-item {
+              color: black;
+              transition: 0.3s ease both;
+            } 
+          
+             .navbar .nav-link:focus,
+            .navbar .dropdown-item:focus,
+            .navbar .nav-link:active,
+            .navbar .dropdown-item:active {
+              color: black;
+              outline: none;
+            } 
+          } */
+          .footer-sub {
+            background-color: #f5f5f5;
+            position: relative;
+            margin-top: 20px;
+          }
+          
+          .footer-sub h6 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+          }
+          
+          .footer-sub p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #777;
+          }
+          
+          .social li {
+            display: inline-block;
+            margin-right: 8px;
+          }
+          
+          .social li:last-child {
+            margin-right: 0;
+          }
+          
+          .social a {
+            display: block;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+          }
+          
+          .social a {
+            color: #000;
+            background-color: #fff;
+            transition: color 0.3s, background-color 0.3s;
+          }
+          
+          .social li a[href="#facebook"]:hover {
+            background: #3B5998;
+            color: white;
+          }
+          
+          .social li a[href="#linkedin"]:hover {
+            color: #fff;
+            background-color: #007bb6
+          }
+          
+          .social li a[href="#twitter"]:hover {
+            background: #55ACEE;
+            color: white;
+          }
+          
+          .social li a[href="#google"]:hover {
+            color: #fff;
+            background-color: #dd4b39;
+          }
+          
+          .social li a[href="#pinterest"]:hover {
+            color: #fff;
+            background-color: #cb2027;
+          }
+          
+          .sub-two-right ul {
+            padding-left: 0;
+            list-style: none;
+          }
+          
+          .sub-two-right ul li {
+            margin-bottom: 10px;
+          }
+          
+          .sub-two-right ul li a {
+            color: #333;
+            text-decoration: none;
+          }
+          
+          .sub-two-right ul li a:hover {
+            text-decoration: underline;
+          }
+          
+          
+          .columns {
+            font-size: 14px;
+            color: #777;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 2px;
+          }
+          
+          
+          .columns a {
+            color: #007bff;
+            text-decoration: none;
+          }
+          
+          .columns a:hover {
+            text-decoration: underline;
+          }
+          
+          @media (max-width: 767px) {
+            .social li a[href="#facebook"] {
+              background: #3B5998;
+              color: white;
+            }
+          
+            .social li a[href="#linkedin"] {
+              color: #fff;
+              background-color: #007bb6;
+            }
+          
+            .social li a[href="#twitter"] {
+              background: #55ACEE;
+              color: white;
+            }
+          
+            .social li a[href="#google"] {
+              color: #fff;
+              background-color: #dd4b39;
+            }
+          
+            .social li a[href="#pinterest"] {
+              color: #fff;
+              background-color: #cb2027;
+            }
+          }
+          
+          /* footer ends */
+    </style>
+</head>
+<body onload="showSlides()">
+  <script src="placement.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- header -->
+  <div style="z-index:1; margin-bottom:100px;" class="acting">
+    <nav id="navbar" class="navbar navbar-expand-lg navback fixed-top" style="background-color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);color:black;">
+        <div class="container-fluid" style="display: flex;">
+          <a class="navbar-brand" href="#"><img class="srkrlogo" src="./assests/images/logo.png" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style="background-color: white;">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown" style="justify-content: right;">
+            <ul class="navbar-nav navback1">
+              <li class="nav-item">
+                <a class="nav-link"  href="index.html" role="button" aria-expanded="false" style="color: black;margin-right:5px">Home</a>
+            </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle"  href="#" role="button" aria-expanded="false" style="color: black;">About</a>
+                    <ul class="dropdown-menu navback">
+                        <li><a class="dropdown-item itemlink" href="faculty.html"><b>Faculty</b></a></li>
+                        <li><a class="dropdown-item itemlink" href="#"><b>Facilities</b></a></li>
+                        <li><a class="dropdown-item itemlink" href="#">Labs</a></li>
+                        <li><a class="dropdown-item itemlink" href="#">Contacts</a></li>
+                        <li><a class="dropdown-item itemlink" href="alumini.html"><b>Alumini</b></a></li>
+                        <li><a class="dropdown-item itemlink" href="vismis.html"><b>Vision & Mission</b></a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown aclink">
+                  <a class="nav-link dropdown-toggle"  href="#" role="button" aria-expanded="false" style="color: black;">Academic</a>
+                  <ul class="dropdown-menu navback acabout">
+                      <li><a class="dropdown-item navlink" href="syllabus.html"><b>Syllabus</b></a></li>
+                      <li><a class="dropdown-item navlink" href="timetables.html"><b>TimeTables</b></a></li>
+                      <li><a class="dropdown-item navlink" href="eresources.html"><b>Downloads</b></a></li>
+                  </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"  href="#" role="button" aria-expanded="false" style="color: black;">Administration</a>
+                <ul class="dropdown-menu navback">
+                    <li><a class="dropdown-item navlink" href="#"><b>Committe & <br>Board of Studies</b></a></li>
+                    <!-- <li><a class="dropdown-item navlink" href="#"><b></b></a></li> -->
+                </ul>
+            </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" style="color: black;">Accomplishments</a>
+                <ul class="dropdown-menu navback">
+                    <li><a class="dropdown-item navlink" href="#"><b>Awards</b></a></li>
+                    <li><a class="dropdown-item navlink" href="#"><b>Placements</b></a></li>
+                    <li><a class="dropdown-item navlink" href="#"><b>Publications</b></a></li>
+                </ul>
+            </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    </div>
+
+
+<!-- 1)Page must be Responsive -->
+<!-- 2)Don't Write Css code either in inline or internal 
+        please write your css in external file. -->
+<!-- 3)Name your html file as assignedwork.html and css file as assignedwork.css -->
+<!-- 4) Refer Srkr Website for the data. -->
+<!-- 5)Don't disturb the above and below code  -->
+
+
+<h1 class="headline">CSE Placements & Internships</h1>
+<!-- write Your code here   -->
+<div class="slideshow-container">
+  <div class="mySlides fade">
+      <img src="img/1.jpg" style="width:100%">
+  </div>
+  <div class="mySlides fade">
+      <img src="img/2.jpg" style="width:100%">
+       </div>
+  <div class="mySlides fade">
+      <img src="img/3.jpg" style="width:100%">
+      
+  </div>
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+<!-- end -->
+
+
+<h2 class="headline">Placements</h2>
+  <div class="placements">
+        <div class="container">
+            <div class="collapsed" onclick="toggleTable('table1')">
+                <h4>CSE Placements 2022</h4>
+            </div>
+            <div class="table-responsive table-container" id="table1">
+                <table class="tables">
+                    <thead class="head">
+                        <tr>
+                            <th>NAME OF THE COMPANY</th>
+                            <th>NO. OF STUDENTS RECRUITED</th>
+                            <th>SALARY OFFERED (in Lakhs)</th>
+                            <th>VIEW DETAILS</th>
+                        </tr>
+                    </thead>
+                    <tbody class="intable">
+                        <tr>
+                            <th><a href='files/CSE/placements/2021_22/Accolite Digital.pdf'
+                                    target='_new'>Accolite</a></th>
+                            <th>8</th>
+                            <th>5.0</th>
+                            <th><a href="files/CSE/placements/2021_22/Accolite Digital.pdf"
+                                    target='_new'>View Details</a></th>
+                        </tr>
+                        <tr>
+                            <th><a href='files/CSE/placements/2021_22/Axiomio.pdf'
+                                    target='_new'>Axiomio </a></th>
+                            <th>9</th>
+                            <th>6</th>
+                            <th><a href="files/CSE/placements/2021_22/Axiomio.pdf"
+                                    target='_new'>View Details</a></th>
+                        </tr>
+                </table>
+            </div>
+        </div>
+        <hr>
+        <div class="container">
+            <div class="collapsed" onclick="toggleTable('table2')">
+                <h4>CSE Placements 2021</h4>
+            </div>
+            <div class="table-responsive table-container" id="table2">
+                <table class="tables">
+                    <thead class="head">
+                        <tr>
+                            <th>NAME OF THE COMPANY</th>
+                            <th>NO. OF STUDENTS RECRUITED</th>
+                            <th>SALARY OFFERED (in Lakhs)</th>
+                            <th>VIEW DETAILS</th>
+                        </tr>
+                    </thead>
+                    <tbody class="intable">
+                        <tr>
+                            <th><a href='files/CSE/placements/2021_22/Accolite Digital.pdf'
+                                    target='_new'>Accolite</a></th>
+                            <th>8</th>
+                            <th>5.0</th>
+                            <th><a href="files/CSE/placements/2021_22/Accolite Digital.pdf"
+                                    target='_new'>View Details</a></th>
+                        </tr>
+                        <tr>
+                            <th><a href='files/CSE/placements/2021_22/Axiomio.pdf'
+                                    target='_new'>Axiomio </a></th>
+                            <th>9</th>
+                            <th>6</th>
+                            <th><a href="files/CSE/placements/2021_22/Axiomio.pdf"
+                                    target='_new'>View Details</a></th>
+                        </tr>
+                </table>
+            </div>
+        </div>
+        <hr>
+        <div class="container">
+            <div class="collapsed" onclick="toggleTable('table3')">
+                <h4>CSE Placements 2020</h4>
+            </div>
+            <div class="table-responsive table-container" id="table3">
+                <table class="tables">
+                    <thead class="head">
+                        <tr>
+                            <th>NAME OF THE COMPANY</th>
+                            <th>NO. OF STUDENTS RECRUITED</th>
+                            <th>SALARY OFFERED (in Lakhs)</th>
+                            <th>VIEW DETAILS</th>
+                        </tr>
+                    </thead>
+                    <tbody class="intable">
+                        <tr>
+                            <th><a href='files/CSE/placements/2021_22/Accolite Digital.pdf'
+                                    target='_new'>Accolite</a></th>
+                            <th>8</th>
+                            <th>5.0</th>
+                            <th><a href="files/CSE/placements/2021_22/Accolite Digital.pdf"
+                                    target='_new'>View Details</a></th>
+                        </tr>
+                        <tr>
+                            <th><a href='files/CSE/placements/2021_22/Axiomio.pdf'
+                                    target='_new'>Axiomio </a></th>
+                            <th>9</th>
+                            <th>6</th>
+                            <th><a href="files/CSE/placements/2021_22/Axiomio.pdf"
+                                    target='_new'>View Details</a></th>
+                        </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+   <h2 class="headline">Internships</h2>
+    <div class="table-responsive">
+      <table class="table table-hover course-list-table tablesorter">
+          <thead>
+              <tr>
+                  <th>S.No</th>
+                  <th>Reg.No</th>
+                  <th>Student Name</th>
+                  <th>Company/University</th>
+                  <th>Period</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <th>1</th>
+                  <th>17B91A0520</th>
+                  <th>BOJJAGANI NAGA LAKSHMI</th>
+                  <th>Bennet University</th>
+                  <th>May 2019-jun 2019</th>
+
+              </tr>
+
+              <tr>
+                  <th>2</th>
+                  <th>17B91A05E0</th>
+                  <th>N SRI SRAVYA</th>
+                  <th>Bennet University</th>
+                  <th>May 2019-jun 2019</th>
+
+              </tr>
+
+              <tr>
+                  <th>3</th>
+                  <th>17b91A05N4</th>
+                  <th>SUMANTH</th>
+                  <th>Bennet University</th>
+                  <th>May 2019-jun 2019</th>
+
+              </tr>
+
+              <tr>
+                  <th>4</th>
+                  <th>17B91A05I8</th>
+                  <th>SASUMANA VINAY KUMAR</th>
+                  <th>Bennet University</th>
+                  <th>May 2019-jun 2019</th>
+
+              </tr>
+
+              <tr>
+                  <th>5</th>
+                  <th>17b91b0526</th>
+                  <th>KOTLA NIKHIL</th>
+                  <th>Bennet University</th>
+                  <th>May 2019-jun 2019</th>
+
+              </tr>
+              <tr>
+                <th>72</th>
+                <th>315175710229</th>
+                <th>VISWANADHUNI SAI CHAITANYA</th>
+                <th>Valuelabs</th>
+                <th>Dec 2018-Feb 2019</th>
+
+            </tr>
+
+        </tbody>
+    </table>
+    </div>
+
+<footer class="w3l-footer-22 ">
+    <div class="footer-sub py-5">
+      <div class="container1 ">
+        <div class="row sub-columns">
+          <div class="col-lg-4 col-md-6 sub-one-left ab-right-cont pr-lg-5 mb-md-0 mb-4">
+            <h3>About</h3>
+            <p>Sagi Rama Krishnam Raju Engineering College (SRKREC), established in 1980, is a self-financed academic institution of coeducation striving to provide a high quality technical education to engineering aspirants. Being one of the premier and well-established technical institutions of the country, it continues to render service to the nation and the world at large with its alumni holding highly prestigious positions and making substantial contribution.</p>
+            <div class="columns-2">
+              <ul class="social">
+                <li><a href="#facebook"><span class="fab fa-facebook-f" aria-hidden="true"></span></a></li>
+                <li><a href="#linkedin"><span class="fab fa-linkedin-in" aria-hidden="true"></span></a></li>
+                <li><a href="#twitter"><span class="fab fa-twitter" aria-hidden="true"></span></a></li>
+                <li><a href="#google"><span class="fab fa-google-plus-g" aria-hidden="true"></span></a></li>
+                <li><a href="#pinterest"><span class="fab fa-pinterest-p" aria-hidden="true"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 sub-two-right pl-lg-5">
+            <h3>Useful Links</h3>
+            <ul>
+              <li><a href="index.html"><span class="fas fa-chevron-right mr-2"></span>&nbsp;&nbsp;Home</a></li>
+              <li><a href="about.html"><span class="fas fa-chevron-right mr-2"></span>&nbsp;&nbsp;About</a></li>
+              <li><a href="courses.html"><span class="fas fa-chevron-right mr-2"></span>&nbsp;&nbsp;Courses</a></li>
+              <li><a href="contact.html"><span class="fas fa-chevron-right mr-2"></span>&nbsp;&nbsp;Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 sub-two-right pl-lg-5 mt-md-0 mt-4">
+            <h3>Help & Support</h3>
+            <ul>
+              <li><a href="#live"><span class="fas fa-chevron-right mr-2"></span>&nbsp;&nbsp;Live Chart</a></li>
+              <li><a href="#faq"><span class="fas fa-chevron-right mr-2"></span>&nbsp;&nbsp;FAQ</a></li>
+              <li><a href="#support"><span class="fas fa-chevron-right mr-2"></span>&nbsp;&nbsp;Support</a></li>
+              <li><a href="#terms"><span class="fas fa-chevron-right mr-2"></span>&nbsp;&nbsp;Terms of Service</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 sub-two-right mt-md-0 mt-4">
+            <h3>Research</h3>
+            <ul>
+              <li><a href="#"><span class="fas fa-chevron-right mr-2"></span>&nbsp;&nbsp;Academic Divisions</a></li>
+              <li><a href="#"><span class="fas fa-chevron-right mr-2"></span>&nbsp;&nbsp;Student Research</a></li>
+              <li><a href="#"><span class="fas fa-chevron-right mr-2"></span>&nbsp;&nbsp;Centers & Institutes</a></li>
+              <li><a href="#"><span class="fas fa-chevron-right mr-2"></span>&nbsp;&nbsp;Research Facilities</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="columns">
+        <p>© 2023 SRKREC-CSE. All rights reserved. Design by <a href="https://srkrec.edu.in/" target="_blank">SRKREC</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
